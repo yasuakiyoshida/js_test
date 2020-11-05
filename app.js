@@ -63,6 +63,16 @@ alert(promptStr);
 
 var user_hand = prompt('じゃんけんの手をグー、チョキ、パーから選んでください。');
 
+while( (user_hand != "グー") && (user_hand != "チョキ") && (user_hand != "パー") && (user_hand != null) ){
+  alert("グー・チョキ・パーのいずれかを入力してください");
+  user_hand = prompt('じゃんけんの手をグー、チョキ、パーから選んでください。');
+}
+
+if(user_hand == null){
+  alert("またチャレンジしてね");
+  exit;
+}
+
 var js_hand = getJShand();
 
 var judge = winLose(user_hand, js_hand);
